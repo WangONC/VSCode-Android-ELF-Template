@@ -1,0 +1,63 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "远程调试",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "cwd": "/data/local/tmp",
+            "initCommands": [
+                "platform select remote-android",
+                "platform connect connect://localhost:28086",
+                "platform settings -w /data/local/tmp",
+                "settings set target.inherit-env false", // 禁用继承环境变量
+            ],
+            "stopOnEntry": false,
+            "preLaunchTask": "运行调试准备",
+            "sourceMap": {
+                "/data/local/tmp": "${workspaceFolder}"
+            },
+            "preTerminateCommands": [
+                "process kill",  // 确保进程被正确终止
+                "process detach",
+                "platform disconnect connect://localhost:28086"
+            ],
+            "postDebugTask": "停止LLDB服务器",
+            "presentation": {
+                "hidden": false,
+                "group": "调试",
+                "order": 1
+            }
+        },
+        {
+            "name": "远程调试 (Root)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "cwd": "/data/local/tmp",
+            "initCommands": [
+                "platform select remote-android",
+                "platform connect connect://localhost:28086",
+                "platform settings -w /data/local/tmp",
+                "settings set target.inherit-env false" // 禁用继承环境变量
+            ],
+            "stopOnEntry": false,
+            "preLaunchTask": "运行调试准备 (Root)",
+            "sourceMap": {
+                "/data/local/tmp": "${workspaceFolder}"
+            },
+            "preTerminateCommands": [
+                "process kill",  // 确保进程被正确终止
+                "process detach",
+                "platform disconnect connect://localhost:28086"
+            ],
+            "postDebugTask": "停止LLDB服务器",
+            "presentation": {
+                "hidden": false,
+                "group": "调试",
+                "order": 2
+            }
+        }
+    ]
+}

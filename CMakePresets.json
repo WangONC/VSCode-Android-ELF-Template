@@ -1,0 +1,64 @@
+{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "android-arm64-debug",
+            "displayName": "Arm64 Debug",
+            "description": "设置 Ninja 生成器、版本和安装目录，Android21，Arm64-v8a，Debug",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_MAKE_PROGRAM": "<SDK_PATH>/cmake/<CMAKE_VERSION>/bin/ninja.exe",
+                "CMAKE_TOOLCHAIN_FILE": "<NDK_PATH>/build/cmake/android.toolchain.cmake",
+                "CMAKE_BUILD_TYPE": "Debug",
+                "ANDROID_ABI": "arm64-v8a",
+                "ANDROID_PLATFORM": "android-21",
+                "ANDROID_CPP_FEATURES": "rtti exceptions",
+                "ANDROID_STL": "c++_static",
+                "ANDROID_ALLOW_UNDEFINED_SYMBOLS": "ON",
+                "CMAKE_CXX_FLAGS_DEBUG": "-g3 -ggdb3 -O0 -fno-limit-debug-info -fno-omit-frame-pointer -D_GLIBCXX_DEBUG",
+                "CMAKE_C_FLAGS_DEBUG": "-g3 -ggdb3 -O0 -fno-limit-debug-info -fno-omit-frame-pointer",
+                "CMAKE_EXE_LINKER_FLAGS_DEBUG": "-Wl,--export-dynamic",
+                "CMAKE_SHARED_LINKER_FLAGS_DEBUG": "-Wl,--export-dynamic",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}"
+            },
+            "environment": {
+                "ANDROID_NDK_TOOLCHAIN_DEBUG": "1"
+            }
+        },
+        {
+            "name": "android-arm64-release",
+            "displayName": "Arm64 Release",
+            "description": "设置 Ninja 生成器、版本和安装目录,Android21,Arm64-v8a,Release",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_MAKE_PROGRAM": "<SDK_PATH>/cmake/<CMAKE_VERSION>/bin/ninja.exe",
+                "CMAKE_TOOLCHAIN_FILE": "<NDK_PATH>/build/cmake/android.toolchain.cmake",
+                "CMAKE_BUILD_TYPE": "Release",
+                "ANDROID_ABI": "arm64-v8a",
+                "ANDROID_PLATFORM": "android-21",
+                "ANDROID_CPP_FEATURES": "rtti exceptions",
+                "CMAKE_CXX_FLAGS_RELEASE": "-O3 -DNDEBUG -ffunction-sections -fdata-sections -fvisibility=hidden -fvisibility-inlines-hidden -fno-unwind-tables -fno-asynchronous-unwind-tables -fno-exceptions -fomit-frame-pointer -flto",
+                "CMAKE_C_FLAGS_RELEASE": "-O3 -DNDEBUG -ffunction-sections -fdata-sections -fvisibility=hidden -fomit-frame-pointer -flto",
+                "CMAKE_EXE_LINKER_FLAGS_RELEASE": "-Wl,--gc-sections -Wl,--strip-all -Wl,--icf=all -Wl,--as-needed",
+                "CMAKE_SHARED_LINKER_FLAGS_RELEASE": "-Wl,--gc-sections -Wl,--strip-all -Wl,--icf=all -Wl,--as-needed",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "android-arm64-debug",
+            "configurePreset": "android-arm64-debug",
+            "displayName": "构建 Arm64 Debug",
+            "description": "构建 Debug 版本"
+        },
+        {
+            "name": "android-arm64-release",
+            "configurePreset": "android-arm64-release",
+            "displayName": "构建 Arm64 Release",
+            "description": "构建 Release 版本"
+        }
+    ]
+}

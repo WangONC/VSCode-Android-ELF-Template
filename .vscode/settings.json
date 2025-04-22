@@ -1,0 +1,3 @@
+{
+    "cmake.cmakePath": "<SDK_PATH>\\cmake\\<CMAKE_VERSION>\\bin\\cmake.exe"
+}

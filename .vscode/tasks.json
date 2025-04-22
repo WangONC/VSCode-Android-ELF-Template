@@ -1,0 +1,201 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cmake",
+            "label": "CMake: configure",
+            "command": "configure",
+            "preset": "${command:cmake.activeConfigurePresetName}",
+            "detail": "CMake template configure task",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "cmake",
+            "label": "CMake: build",
+            "command": "build",
+            "preset": "${command:cmake.activeBuildPresetName}",
+            "detail": "CMake template build task",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "CMake: configure"
+            ]
+        },
+        {
+            "type": "cmake",
+            "label": "CMake: install",
+            "command": "install",
+            "preset": "${command:cmake.activeBuildPresetName}",
+            "detail": "CMake template install task",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "CMake: build"
+            ]
+        },
+        {
+            "type": "cmake",
+            "label": "CMake: clean",
+            "command": "clean",
+            "preset": "${command:cmake.activeBuildPresetName}",
+            "detail": "CMake template clean task",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "cmake",
+            "label": "CMake: clean rebuild",
+            "command": "cleanRebuild",
+            "preset": "${command:cmake.activeBuildPresetName}",
+            "detail": "CMake template clean rebuild task",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "部署",
+            "type": "cmake",
+            "command": "build",
+            "targets": [
+                "deploy"
+            ],
+            "detail": "部署输出项目到目标设备",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "CMake: build"
+            ]
+        },
+        {
+            "label": "仅运行",
+            "type": "cmake",
+            "command": "build",
+            "targets": [
+                "run"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "仅运行 (root)",
+            "type": "cmake",
+            "command": "build",
+            "targets": [
+                "run_as_root"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "构建并运行",
+            "type": "cmake",
+            "command": "build",
+            "targets": [
+                "run"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "部署"
+            ]
+        },
+        {
+            "label": "构建并运行 (root)",
+            "type": "cmake",
+            "command": "build",
+            "targets": [
+                "run_as_root"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "部署"
+            ]
+        },
+        {
+            "label": "启动LLDB服务器",
+            "type": "cmake",
+            "command": "build",
+            "targets": [
+                "start_lldb"
+            ],
+            "group": "build",
+            "detail": "启动设备上的lldb服务器"
+        },
+        {
+            "label": "启动LLDB服务器 (Root)",
+            "type": "cmake",
+            "command": "build",
+            "targets": [
+                "start_lldb_root"
+            ],
+            "group": "build",
+            "detail": "root权限下启动设备上的lldb服务器"
+        },
+        {
+            "label": "停止LLDB服务器",
+            "type": "cmake",
+            "command": "build",
+            "targets": [
+                "stop_lldb"
+            ],
+            "group": "build",
+            "detail": "停止设备上的LLDB服务器"
+        },
+        {
+            "label": "运行调试准备",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "CMake: build",
+                "部署",
+                "停止LLDB服务器",
+                "启动LLDB服务器"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "silent",
+                "revealProblems": "onProblem",
+                "close": true
+            }
+        },
+        {
+            "label": "运行调试准备 (Root)",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "CMake: build",
+                "部署",
+                "停止LLDB服务器",
+                "启动LLDB服务器 (Root)"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent",
+                "revealProblems": "onProblem",
+                "close": true
+            }
+        },
+    ],
+}
