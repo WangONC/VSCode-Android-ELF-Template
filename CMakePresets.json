@@ -20,7 +20,10 @@
                 "CMAKE_C_FLAGS_DEBUG": "-g3 -ggdb3 -O0 -fno-limit-debug-info -fno-omit-frame-pointer",
                 "CMAKE_EXE_LINKER_FLAGS_DEBUG": "-Wl,--export-dynamic",
                 "CMAKE_SHARED_LINKER_FLAGS_DEBUG": "-Wl,--export-dynamic",
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}"
+                "CMAKE_RUNTIME_OUTPUT_DIRECTORY": "${sourceDir}/bin/${presetName}",
+                "CMAKE_LIBRARY_OUTPUT_DIRECTORY": "${sourceDir}/bin/lib/${presetName}",
+                "CMAKE_ARCHIVE_OUTPUT_DIRECTORY": "${sourceDir}/lib/${presetName}",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}"
             },
             "environment": {
                 "ANDROID_NDK_TOOLCHAIN_DEBUG": "1"
@@ -43,7 +46,10 @@
                 "CMAKE_C_FLAGS_RELEASE": "-O3 -DNDEBUG -ffunction-sections -fdata-sections -fvisibility=hidden -fomit-frame-pointer -flto",
                 "CMAKE_EXE_LINKER_FLAGS_RELEASE": "-Wl,--gc-sections -Wl,--strip-all -Wl,--icf=all -Wl,--as-needed",
                 "CMAKE_SHARED_LINKER_FLAGS_RELEASE": "-Wl,--gc-sections -Wl,--strip-all -Wl,--icf=all -Wl,--as-needed",
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}"
+                "CMAKE_RUNTIME_OUTPUT_DIRECTORY": "${sourceDir}/bin/${presetName}",
+                "CMAKE_LIBRARY_OUTPUT_DIRECTORY": "${sourceDir}/bin/lib/${presetName}",
+                "CMAKE_ARCHIVE_OUTPUT_DIRECTORY": "${sourceDir}/lib/${presetName}",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}"
             }
         }
     ],
