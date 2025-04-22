@@ -84,7 +84,7 @@ adb shell chmod 755 /data/local/tmp/lldb-server
 
 4. 部署到设备:
 
-    -在命令面板中执行: `Tasks: Run Task` → 选择 部署。这会构建项目后，通过adb将其部署到设备的/data/local/tmp目录下
+    - 在命令面板中执行: `Tasks: Run Task` → 选择 部署。这会构建项目后，通过adb将其部署到设备的/data/local/tmp目录下
 5. 调试应用:
 
     - 从调试面板选择"远程调试"或"远程调试 (Root)"
