@@ -4,6 +4,7 @@
             "name": "ARM (32-bit)",
             "includePath": [
                 "${workspaceFolder}/include",
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\c++\\v1",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\arm-linux-androideabi",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\include\\c++\\4.9.x",
@@ -16,6 +17,7 @@
             "name": "ARM64 (64-bit)",
             "includePath": [
                 "${workspaceFolder}/include",
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\c++\\v1",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\aarch64-linux-android",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\include\\c++\\4.9.x",
@@ -28,6 +30,7 @@
             "name": "x86_64 (64-bit)",
             "includePath": [
                 "${workspaceFolder}/include",
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\c++\\v1",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\x86_64-linux-android",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\include\\c++\\4.9.x",
@@ -40,6 +43,7 @@
             "name": "x86 (32-bit)",
             "includePath": [
                 "${workspaceFolder}/include",
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\c++\\v1",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\i686-linux-android",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\include\\c++\\4.9.x",
@@ -52,6 +56,7 @@
             "name": "RISC-V (64-bit)",
             "includePath": [
                 "${workspaceFolder}/include",
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\c++\\v1",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\riscv64-linux-android",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\include\\c++\\4.9.x",
