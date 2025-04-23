@@ -5,10 +5,9 @@
             "includePath": [
                 "${workspaceFolder}/include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\c++\\v1",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include",
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include"，
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\arm-linux-androideabi",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\include\\c++\\4.9.x",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include"
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include"
             ],
             "defines": ["__ARM_ARCH_7A__", "ANDROID"],
             "intelliSenseMode": "linux-clang-arm"
@@ -18,10 +17,9 @@
             "includePath": [
                 "${workspaceFolder}/include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\c++\\v1",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include",
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include"，
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\aarch64-linux-android",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\include\\c++\\4.9.x",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include"
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include"
             ],
             "defines": ["__aarch64__", "ANDROID"],
             "intelliSenseMode": "linux-clang-arm64"
@@ -31,10 +29,9 @@
             "includePath": [
                 "${workspaceFolder}/include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\c++\\v1",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include",
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include"，
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\x86_64-linux-android",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\include\\c++\\4.9.x",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include"
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include"
             ],
             "defines": ["__x86_64__", "ANDROID"],
             "intelliSenseMode": "linux-clang-x64"
@@ -44,10 +41,9 @@
             "includePath": [
                 "${workspaceFolder}/include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\c++\\v1",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include",
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include"，
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\i686-linux-android",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\include\\c++\\4.9.x",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include"
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include"
             ],
             "defines": ["__i386__", "ANDROID"],
             "intelliSenseMode": "linux-clang-x86"
@@ -57,10 +53,9 @@
             "includePath": [
                 "${workspaceFolder}/include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\c++\\v1",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include",
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include"，
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\riscv64-linux-android",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\include\\c++\\4.9.x",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include"
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include"
             ],
             "defines": ["__riscv", "__riscv_xlen=64", "ANDROID"],
             "intelliSenseMode": "clang-x64"
