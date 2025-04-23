@@ -5,7 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\c++\\v1",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include"，
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\arm-linux-androideabi",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include"
             ],
@@ -17,7 +17,7 @@
             "includePath": [
                 "${workspaceFolder}/include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\c++\\v1",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include"，
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\aarch64-linux-android",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include"
             ],
@@ -29,7 +29,7 @@
             "includePath": [
                 "${workspaceFolder}/include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\c++\\v1",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include"，
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\x86_64-linux-android",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include"
             ],
@@ -41,7 +41,7 @@
             "includePath": [
                 "${workspaceFolder}/include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\c++\\v1",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include"，
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\i686-linux-android",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include"
             ],
@@ -53,7 +53,7 @@
             "includePath": [
                 "${workspaceFolder}/include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\c++\\v1",
-                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include"，
+                "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\18\\include",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include\\riscv64-linux-android",
                 "<NDK_PATH>\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\include"
             ],
