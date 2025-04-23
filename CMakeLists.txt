@@ -16,9 +16,8 @@ include_directories(".")
 
 # 添加头文件路径
 include_directories(include)
+include_directories(${ANDROID_NDK_HOME}/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1) # c++标准头文件
 include_directories(${ANDROID_NDK_HOME}/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/18/include) # clang的头文件
-include_directories(${ANDROID_NDK_HOME}/toolchains/llvm/prebuilt/windows-x86_64/include/c++/4.9.x) # c++标准头文件
-include_directories(${ANDROID_NDK_HOME}/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include) # 系统头文件
 # 架构特定的头文件
 if(ANDROID_ABI STREQUAL "arm64-v8a")
     include_directories(${ANDROID_SYSROOT}/usr/include/aarch64-linux-android)
@@ -31,6 +30,7 @@ elseif(ANDROID_ABI STREQUAL "x86")
 elseif(ANDROID_ABI STREQUAL "riscv64")
     include_directories(${ANDROID_SYSROOT}/usr/include/riscv64-linux-android)
 endif()
+include_directories(${ANDROID_NDK_HOME}/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include) # 系统头文件
 
 # 收集源文件
 file(GLOB_RECURSE SOURCE_FILES "src/*.cpp" "src/*.c")
